@@ -40,7 +40,7 @@ import About from "./pages/About";
 import IoTSmartSolutions from "./pages/Iot";
 import AIMLPage from "./pages/AIMLPage";
 
-// Placeholder Pages
+// ✅ Placeholder for Services root
 const ServicesPage = () => (
   <>
     <div className="min-h-screen pt-20 px-6 text-center">
@@ -54,7 +54,7 @@ const ServicesPage = () => (
   </>
 );
 
-// Layout wrapper for Service & Industry subpages
+// ✅ Wrapper to append testimonials & why-choose-us
 const WithWhyChooseUs = ({ children }) => (
   <>
     {children}
@@ -63,7 +63,7 @@ const WithWhyChooseUs = ({ children }) => (
   </>
 );
 
-// Home Page Layout
+// ✅ Home Page Layout
 const HomePage = () => (
   <>
     <HeroSection />
@@ -83,6 +83,7 @@ const HomePage = () => (
 const App = () => {
   return (
     <>
+      {/* 🔑 ScrollToTop works fine now, since BrowserRouter wraps App in main.jsx */}
       <ScrollToTop />
       <Navbar />
       <Toaster position="top-center" reverseOrder={false} />
@@ -223,7 +224,7 @@ const App = () => {
         {/* Contact */}
         <Route path="/contact" element={<ContactUs />} />
 
-        {/* Privacy Policy */}
+        {/* Privacy / Terms / About */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/about" element={<About />} />
